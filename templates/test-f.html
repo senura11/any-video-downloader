@@ -1,0 +1,58 @@
+
+
+    <!-- Custom Styles -->
+    <style>
+        /* Style for the container */
+        .container {
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        /* Style for the thumbnail image */
+        .thumbnail {
+            max-width: 50%; /* Adjusted to make the image responsive */
+            height: auto;
+        }
+
+        /* Style for the download format buttons */
+        .download-format-button {
+            margin: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: #00ff2a;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
+        role="banner" class="navigation w-nav"> <!-- Navigation bar -->
+        <!-- ... (Your existing navigation code) -->
+    </div>
+    <div class="section cc-home-wrap">
+        <div class="intro-header cc-subpage">
+            <div class="intro-content"></div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <!-- Insert your content here -->
+            <h2>{{title}}</h2>
+            <div class="thumbnail-formats">
+                <img src="{{thumbnail or 'https://www.fing.edu.uy/inco/grupos/gsi/img/placeholder.png'}}" alt="Thumbnail" class="thumbnail" />
+                <div>
+                    {% for format in formats %}
+                    <a href="{{format.url}}" target="_blank" rel="noreferrer">
+                        <button class="download-format-button">{{format.format_name}}</button>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ... (Your existing script includes) -->
+</body>
+
+</html>

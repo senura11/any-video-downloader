@@ -14,7 +14,7 @@ def extract_format_data(format_data):
 
 
 def extract_video_data_from_url(url):
-    command = f'yt-dlp -v --ignore-config --proxy http://ujckozae-rotate:iskqc5n3kmac@p.webshare.io:80/ "{url}" -j --no-playlist'
+    command = f'yt-dlp "{url}" -j --no-playlist'
     output = os.popen(command).read()
     video_data = json.loads(output)
     title = video_data["title"]

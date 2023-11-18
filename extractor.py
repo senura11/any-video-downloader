@@ -14,7 +14,7 @@ def extract_format_data(format_data):
 
 
 def extract_video_data_from_url(url):
-    command = f'yt-dlp "{url}" --no-playlist'
+    command = f'yt-dlp "{url}" -j --no-playlist'
     output = os.popen(command).read()
     video_data = json.loads(output)
     title = video_data["title"]

@@ -13,5 +13,4 @@ packaging==23.2
 pycryptodomex==3.19.0
 websockets==12.0
 Werkzeug==3.0.1
-yt-dlp==2023.10.13
-youtube-dlc==2020.11.11.post3
+yt-dlp==2023.11.16
